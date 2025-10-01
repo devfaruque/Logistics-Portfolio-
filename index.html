@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pfenning Logistics - Leading Logistics Solutions Provider</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://readdy.ai/api/search-image?query=Modern%20logistics%20operations%20with%20automated%20warehouses%2C%20container%20ships%2C%20and%20transportation%20networks%20in%20aerial%20view%2C%20professional%20industrial%20photography%20with%20clean%20composition%2C%20blue%20sky%20background%2C%20high-tech%20logistics%20facilities%20with%20organized%20container%20yards%20and%20modern%20infrastructure%2C%20cinematic%20lighting%2C%20ultra-wide%20perspective&width=1920&height=1080&seq=hero001&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .counter {
+            transition: all 0.3s ease;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="sticky-header">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-['Pacifico'] text-primary mr-8">Pfenning Logistics</div>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <div class="dropdown relative">
+                        <a href="#" class="text-gray-700 hover:text-primary font-medium flex items-center">
+                            Services
+                            <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-down-s-line text-sm"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border">
+                            <div class="p-4">
+                                <a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded">Transportation</a>
+                                <a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded">Warehousing</a>
+                                <a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded">Supply Chain Management</a>
+                                <a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded">Distribution</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <a href="#" class="text-gray-700 hover:text-primary font-medium flex items-center">
+                            Industries
+                            <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-down-s-line text-sm"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border">
+                            <div class="p-4">
+                                <a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded">Automotive</a>
+                                <a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded">Retail & E-commerce</a>
+                                <a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded">Healthcare</a>
+                                <a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded">Manufacturing</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">About</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">News</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-700 transition-colors whitespace-nowrap">Get Quote</button>
+                    <button class="lg:hidden w-8 h-8 flex items-center justify-center">
+                        <i class="ri-menu-line text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-bg relative min-h-screen flex items-center">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 w-full">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">
+                        Excellence in Global Logistics Solutions
+                    </h1>
+                    <p class="text-xl text-white mb-8 opacity-90 animate-fade-in">
+                        Connecting businesses worldwide through innovative supply chain management, advanced technology, and sustainable logistics practices that drive success.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 animate-fade-in">
+                        <button class="bg-primary text-white px-8 py-4 !rounded-button font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
+                            Get Your Quote
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 !rounded-button font-semibold hover:bg-white hover:text-primary transition-colors whitespace-nowrap">
+                            Explore Services
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center counter">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mx-auto mb-4">
+                        <i class="ri-truck-line text-2xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 mb-2" data-count="25000">0</div>
+                    <div class="text-gray-600">Shipments Delivered</div>
+                </div>
+                <div class="text-center counter">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mx-auto mb-4">
+                        <i class="ri-global-line text-2xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 mb-2" data-count="45">0</div>
+                    <div class="text-gray-600">Countries Served</div>
+                </div>
+                <div class="text-center counter">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mx-auto mb-4">
+                        <i class="ri-time-line text-2xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 mb-2" data-count="30">0</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div class="text-center counter">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mx-auto mb-4">
+                        <i class="ri-award-line text-2xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 mb-2">ISO</div>
+                    <div class="text-gray-600">Certified Quality</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Comprehensive Logistics Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">From transportation to warehousing, we provide end-to-end logistics solutions tailored to your business needs</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20transportation%20logistics%20with%20trucks%20and%20delivery%20vehicles%20on%20highway%2C%20professional%20commercial%20photography%2C%20clean%20blue%20sky%20background%2C%20organized%20fleet%20management%2C%20high-tech%20logistics%20operations%2C%20cinematic%20lighting&width=400&height=300&seq=service001&orientation=landscape')"></div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-lg mb-4">
+                            <i class="ri-truck-line text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Transportation</h3>
+                        <p class="text-gray-600 mb-4">Reliable ground, air, and sea transportation solutions with real-time tracking and optimized routes for maximum efficiency.</p>
+                        <button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Learn More →</button>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20automated%20warehouse%20with%20organized%20storage%20systems%2C%20robotic%20equipment%20and%20inventory%20management%2C%20professional%20industrial%20photography%2C%20clean%20organized%20layout%2C%20high-tech%20logistics%20facility%2C%20bright%20lighting&width=400&height=300&seq=service002&orientation=landscape')"></div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-lg mb-4">
+                            <i class="ri-building-line text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Warehousing</h3>
+                        <p class="text-gray-600 mb-4">State-of-the-art storage facilities with advanced inventory management systems and flexible space solutions.</p>
+                        <button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Learn More →</button>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Supply%20chain%20management%20with%20connected%20network%20visualization%2C%20digital%20technology%20interface%2C%20professional%20business%20photography%2C%20modern%20office%20environment%2C%20data%20analytics%20dashboard%2C%20clean%20corporate%20setting&width=400&height=300&seq=service003&orientation=landscape')"></div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-lg mb-4">
+                            <i class="ri-links-line text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Supply Chain Management</h3>
+                        <p class="text-gray-600 mb-4">End-to-end supply chain optimization with data-driven insights and strategic planning for operational excellence.</p>
+                        <button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Learn More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Specialized logistics solutions across diverse industry sectors</p>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group cursor-pointer">
+                    <div class="h-32 bg-cover bg-center rounded-xl mb-4 group-hover:scale-105 transition-transform" style="background-image: url('https://readdy.ai/api/search-image?query=Automotive%20industry%20with%20modern%20car%20manufacturing%20and%20assembly%20line%2C%20professional%20industrial%20photography%2C%20clean%20factory%20environment%2C%20organized%20production%20facility%2C%20high-tech%20automotive%20manufacturing&width=300&height=200&seq=industry001&orientation=landscape')"></div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Automotive</h3>
+                    <p class="text-gray-600 text-sm">Just-in-time delivery and parts management</p>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="h-32 bg-cover bg-center rounded-xl mb-4 group-hover:scale-105 transition-transform" style="background-image: url('https://readdy.ai/api/search-image?query=Retail%20and%20e-commerce%20logistics%20with%20modern%20distribution%20center%2C%20package%20sorting%20and%20fulfillment%20operations%2C%20professional%20commercial%20photography%2C%20organized%20warehouse%20environment%2C%20efficient%20order%20processing&width=300&height=200&seq=industry002&orientation=landscape')"></div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Retail & E-commerce</h3>
+                    <p class="text-gray-600 text-sm">Fast fulfillment and last-mile delivery</p>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="h-32 bg-cover bg-center rounded-xl mb-4 group-hover:scale-105 transition-transform" style="background-image: url('https://readdy.ai/api/search-image?query=Healthcare%20logistics%20with%20medical%20supplies%20and%20pharmaceutical%20distribution%2C%20professional%20clinical%20environment%2C%20sterile%20packaging%20and%20temperature-controlled%20storage%2C%20modern%20medical%20facility&width=300&height=200&seq=industry003&orientation=landscape')"></div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Healthcare</h3>
+                    <p class="text-gray-600 text-sm">Temperature-controlled and compliant transport</p>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="h-32 bg-cover bg-center rounded-xl mb-4 group-hover:scale-105 transition-transform" style="background-image: url('https://readdy.ai/api/search-image?query=Manufacturing%20industry%20with%20industrial%20equipment%20and%20production%20machinery%2C%20professional%20factory%20photography%2C%20organized%20manufacturing%20facility%2C%20modern%20industrial%20operations%2C%20efficient%20production%20line&width=300&height=200&seq=industry004&orientation=landscape')"></div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Manufacturing</h3>
+                    <p class="text-gray-600 text-sm">Raw materials and finished goods logistics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Pfenning Logistics</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our unique advantages that set us apart in the logistics industry</p>
+            </div>
+            <div class="space-y-16">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <div class="h-80 bg-cover bg-center rounded-xl" style="background-image: url('https://readdy.ai/api/search-image?query=Advanced%20technology%20integration%20in%20logistics%20with%20AI%20automation%2C%20digital%20interfaces%20and%20smart%20warehouse%20systems%2C%20professional%20technology%20photography%2C%20modern%20data%20center%20environment%2C%20high-tech%20logistics%20operations&width=600&height=400&seq=usp001&orientation=landscape')"></div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-xl mb-6">
+                            <i class="ri-robot-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Advanced Technology Integration</h3>
+                        <p class="text-lg text-gray-600 mb-6">Leveraging AI, IoT, and machine learning to optimize routes, predict demand, and enhance operational efficiency across our entire network.</p>
+                        <button class="text-primary font-semibold hover:text-blue-700 transition-colors whitespace-nowrap">Discover Our Technology →</button>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <div class="h-80 bg-cover bg-center rounded-xl" style="background-image: url('https://readdy.ai/api/search-image?query=Sustainable%20logistics%20operations%20with%20green%20energy%20solutions%2C%20electric%20vehicles%20and%20eco-friendly%20warehouse%20facilities%2C%20professional%20environmental%20photography%2C%20clean%20renewable%20energy%20systems%2C%20modern%20sustainable%20logistics&width=600&height=400&seq=usp002&orientation=landscape')"></div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-xl mb-6">
+                            <i class="ri-leaf-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Sustainable Logistics</h3>
+                        <p class="text-lg text-gray-600 mb-6">Committed to environmental responsibility with carbon-neutral shipping options, electric fleet vehicles, and green warehouse practices.</p>
+                        <button class="text-primary font-semibold hover:text-blue-700 transition-colors whitespace-nowrap">Learn About Sustainability →</button>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <div class="h-80 bg-cover bg-center rounded-xl" style="background-image: url('https://readdy.ai/api/search-image?query=24%2F7%20customer%20support%20center%20with%20professional%20staff%20and%20modern%20communication%20technology%2C%20professional%20business%20photography%2C%20organized%20customer%20service%20environment%2C%20modern%20office%20setting%20with%20support%20team&width=600&height=400&seq=usp003&orientation=landscape')"></div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-xl mb-6">
+                            <i class="ri-customer-service-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">24/7 Customer Support</h3>
+                        <p class="text-lg text-gray-600 mb-6">Round-the-clock dedicated support team ensuring your logistics operations run smoothly with proactive communication and rapid issue resolution.</p>
+                        <button class="text-primary font-semibold hover:text-blue-700 transition-colors whitespace-nowrap">Contact Support →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Latest News & Insights</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Stay updated with industry trends and company developments</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Future%20of%20logistics%20technology%20with%20autonomous%20vehicles%20and%20smart%20transportation%20systems%2C%20professional%20technology%20photography%2C%20modern%20logistics%20innovation%2C%20futuristic%20transportation%20concepts%2C%20clean%20tech%20environment&width=400&height=300&seq=news001&orientation=landscape')"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">December 15, 2024</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">The Future of Autonomous Logistics</h3>
+                        <p class="text-gray-600 mb-4">Exploring how autonomous vehicles and AI-driven systems are revolutionizing the logistics industry and improving delivery efficiency.</p>
+                        <button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Read More →</button>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Sustainable%20supply%20chain%20practices%20with%20green%20logistics%20solutions%20and%20eco-friendly%20operations%2C%20professional%20environmental%20business%20photography%2C%20modern%20sustainable%20warehouse%2C%20clean%20green%20technology&width=400&height=300&seq=news002&orientation=landscape')"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">December 12, 2024</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Sustainable Supply Chain Practices</h3>
+                        <p class="text-gray-600 mb-4">How companies are adopting green logistics practices to reduce environmental impact while maintaining operational efficiency.</p>
+                        <button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Read More →</button>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Global%20trade%20expansion%20with%20international%20shipping%20and%20cross-border%20logistics%20operations%2C%20professional%20commercial%20photography%2C%20modern%20port%20facilities%2C%20international%20business%20operations%2C%20global%20connectivity&width=400&height=300&seq=news003&orientation=landscape')"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">December 10, 2024</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Expanding Global Trade Networks</h3>
+                        <p class="text-gray-600 mb-4">Our strategic partnerships and new routes are opening up opportunities for businesses to reach new markets worldwide.</p>
+                        <button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Read More →</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-white mb-4">Ready to Optimize Your Logistics?</h2>
+                    <p class="text-xl text-blue-100 mb-8">Get in touch with our experts to discuss your logistics needs and discover how we can help streamline your operations.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-primary px-8 py-3 !rounded-button font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Get Quote</button>
+                        <button class="border-2 border-white text-white px-8 py-3 !rounded-button font-semibold hover:bg-white hover:text-primary transition-colors whitespace-nowrap">Schedule Consultation</button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Us</h3>
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <input type="text" placeholder="First Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm">
+                                <input type="text" placeholder="Last Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm">
+                            </div>
+                            <input type="email" placeholder="Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm">
+                            <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm">
+                            <textarea placeholder="Tell us about your logistics needs" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm resize-none"></textarea>
+                            <button type="submit" class="w-full bg-primary text-white py-3 !rounded-button font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="text-2xl font-['Pacifico'] text-primary mb-4">Pfenning Logistics</div>
+                    <p class="text-gray-400 mb-6">Leading the future of logistics with innovative solutions and sustainable practices.</p>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-facebook-fill text-lg"></i>
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-twitter-fill text-lg"></i>
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-linkedin-fill text-lg"></i>
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-instagram-fill text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Transportation</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Warehousing</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Supply Chain Management</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Distribution</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Freight Forwarding</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Industries</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Automotive</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Retail & E-commerce</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Healthcare</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Manufacturing</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Technology</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                                <i class="ri-map-pin-line text-sm"></i>
+                            </div>
+                            <div>123 Logistics Avenue<br>Hamburg, Germany 20095</div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                <i class="ri-phone-line text-sm"></i>
+                            </div>
+                            <div>+49 40 123 456 789</div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                <i class="ri-mail-line text-sm"></i>
+                            </div>
+                            <div>info@pfenning-logistics.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 mb-4 md:mb-0">
+                        © 2025 Pfenning Logistics. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6 text-gray-400">
+                        <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:text-primary transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="counter-animation">
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounter(element, target) {
+                let current = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target.toLocaleString();
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current).toLocaleString();
+                    }
+                }, 20);
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target.querySelector('[data-count]');
+                        if (counter && !counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            const target = parseInt(counter.dataset.count);
+                            animateCounter(counter, target);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('.counter').forEach(counter => {
+                observer.observe(counter);
+            });
+        });
+    </script>
+
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="mobile-menu">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.lg\\:hidden button');
+            const nav = document.querySelector('nav');
+            
+            if (mobileMenuButton && nav) {
+                mobileMenuButton.addEventListener('click', function() {
+                    nav.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = '_A1EVKR-PtcYDwjxHrt-sA';
+    window.host = 'readdy.ai';
+</script>
+</body>
+</html>
